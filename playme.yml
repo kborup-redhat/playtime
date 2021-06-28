@@ -1,9 +1,9 @@
 ---
-- hosts: localhost
+- hosts: all
   gather_facts: true
   tasks:
    - name: Install package on production
      yum: 
        name: sos
        state: present
-     when: "{{ ansible_local['preferences']['general']['production'] }}" == true
+     when: "{{ ansible_local['preferences']['general']['production'] }} == true"
