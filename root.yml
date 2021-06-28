@@ -1,6 +1,7 @@
 ---
 - name: This is the root play
   hosts: all
+  ignore_unreachable: true
   gather_facts: false
   tasks:
    - name: List all files in root
