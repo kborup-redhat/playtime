@@ -15,6 +15,10 @@
      ansible.builtin.debug:
        var: rootout.cmd
 
+   - name: Debug Ansible inter
+     ansible.builtin.debug
+       var: rootout.ansible_facts.discovered_interpreter_python
+
    - name: Get uptime information
      ansible.builtin.shell: /usr/bin/uptime
      register: result
