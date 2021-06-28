@@ -7,8 +7,6 @@
        name: sos
        state: present
      when: "{{ ansible_local['preferance']['general']['production'] }} == true"
-     args:
-       warn: False
 
    - name: Remove package from non prod 
      yum:
