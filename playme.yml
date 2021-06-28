@@ -6,13 +6,13 @@
      yum: 
        name: sos
        state: present
-     when: "{{ ansible_local['preferance']['general']['production'] }} == true"'
+     when: "{{ ansible_local['preferance']['general']['production'] }} == true"
 
    - name: Remove package from non prod 
      yum:
        name: sos
        state: absent
-     when: "{{ ansible_local['preferance']['general']['production'] }} == false"'
+     when: "{{ ansible_local['preferance']['general']['production'] }} == false"
 
    - name: Install once then stop
      yum:
