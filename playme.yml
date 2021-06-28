@@ -1,7 +1,6 @@
 ---
 - hosts: all
   gather_facts: true
-  warn: false
   tasks:
    - name: Install package on production
      yum: 
