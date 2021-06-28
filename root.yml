@@ -8,4 +8,4 @@
 
    - name: Debug roott
      ansible.builtin.debug:
-       var: rootout
+       var: rootout.cmd
