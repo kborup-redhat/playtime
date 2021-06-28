@@ -1,0 +1,11 @@
+---
+- hosts: all
+  gather_facts: true
+  tasks:
+   - name: List all files in root
+     command: "ls -la /root"
+     register: rootout
+
+   - name: Debug roott
+     ansible.builtin.debug:
+       var: rootout
