@@ -16,16 +16,8 @@
        var: rootout.cmd
 
    - name: Debug Ansible inter
-     ansible.builtin.debug
-       var: rootout.ansible_facts
-
-   - name: Get uptime information
-     ansible.builtin.shell: /usr/bin/uptime
-     register: result
-
-   - name: Print return information from the previous task
      ansible.builtin.debug:
-       var: result
+       var: rootout.ansible_facts
 
    - name: This is not the play, it is the task name
      debug: 
