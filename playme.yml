@@ -1,6 +1,5 @@
 ---
 - hosts: all
-  deprecation_warnings: False
   gather_facts: true
   tasks:
    - name: Install package on production
