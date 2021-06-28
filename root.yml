@@ -24,4 +24,4 @@
 
    - name: This is not the play, it is the task name
      debug: 
-       msg: "{{ ansible_play_name }}"
+       msg: "{{ ansible_task_name }}"
