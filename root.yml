@@ -1,5 +1,6 @@
 ---
-- hosts: all
+- name: This is the root play
+  hosts: all
   gather_facts: false
   tasks:
    - name: List all files in root
@@ -24,4 +25,4 @@
 
    - name: This is not the play, it is the task name
      debug: 
-       msg: "{{ ansible_task_name }}"
+       msg: "{{ ansible_play_name }}"
