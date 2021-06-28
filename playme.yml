@@ -6,4 +6,4 @@
      yum: 
        name: sos
        state: present
-     when: "{{ ansible_local['preferences']['general']['production'] }} == true"
+     when: "{{ ansible_local['preferance']['general']['production'] }} == true"
