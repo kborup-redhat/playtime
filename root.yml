@@ -3,9 +3,13 @@
   gather_facts: true
   tasks:
    - name: List all files in root
-     command: "ls -la /root"
+     command: "ls /root"
      register: rootout
 
    - name: Debug roott
+     ansible.builtin.debug:
+       var: rootout
+
+   - name: Debug CMD
      ansible.builtin.debug:
        var: rootout.cmd
