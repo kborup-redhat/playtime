@@ -2,15 +2,15 @@
 - name: This is the root play
   hosts: all
   ignore_unreachable: false
-  gather_facts: false
+  gather_facts: true
   tasks:
-   - name: List all files in root
-     command: "ls /root"
-     register: rootout
+#   - name: List all files in root
+#    command: "ls /root"
+#     register: rootout
 
    - name: Debug roott
      ansible.builtin.debug:
-       var: rootout
+       var: ansible_facts
 
    - name: Debug CMD
      ansible.builtin.debug:
